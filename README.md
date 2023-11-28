@@ -5,7 +5,7 @@ Testes com Cucumber e Cypress
 
 Instalações:
 - npm install cypress --save-dev
-- npm install --save-dev cypress cypress-cucumber-processor
+- npm install --save-dev cypress-cucumber-preprocessor
 - npx cypress@9.7.0 open
 
 Adicione ao arquivo cypress/plugins/index.js:
