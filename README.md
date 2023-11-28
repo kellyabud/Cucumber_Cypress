@@ -29,8 +29,10 @@ Adicione ao arquivo cypress/plugins/index.js:
 Instalação do Xpath para Cypress:
 
 - npm install -D cypress-xpath
- Adicionar ao final do do arquivo cypress/support/index.js:
+
+Adicionar ao final do do arquivo cypress/support/index.js:
 - require('cypress-xpath');
+
 Quando for usar o xpath dentro das classes de Elementos:
 - cy.xpath("//input[@id='wp-submit']")...
 
