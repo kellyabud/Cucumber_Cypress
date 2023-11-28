@@ -1,4 +1,4 @@
-name: Cypress E2E CI
+name: Testes com Cucumber e Cypress
 
 on: [push]
 
