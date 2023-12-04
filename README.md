@@ -1,6 +1,11 @@
 # Cucumber_Cypress
 Testes com Cucumber e Cypress
 
+<div align="center">
+<img src="https://github.com/kellyabud/Cucumber_Cypress/assets/135430840/325c775f-54bf-4614-a3a1-3d4042d7ba19" />
+</div>
+
+
 - Usados para criar e executar testes automatizados baseados em especificações de comportamento escritas em Gherkin.
 
 Instalações:
