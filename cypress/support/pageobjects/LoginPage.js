@@ -1,6 +1,6 @@
 import LoginElements from '../elements/LoginElements'
 const loginElements = new LoginElements
-const url = Cypress.config("baseUrl")
+//const url = Cypress.config("baseUrl")
 
 class LoginPage {
      
