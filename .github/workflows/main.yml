@@ -1,31 +1,29 @@
-name: Testes com Cucumber e Cypress
-
-on: [push]
+name: Cypress tests
+on: 
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
 
 jobs:
-  build:
-
+  checkout-and-test:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: run cypress tests with chrome
+        uses: cypress-io/github-action@v2
+        timeout-minutes: 10
         with:
-          node-version: '18.x'
-      - run: npm install
-      - run: npm run build --if-present      
-
-  cypress_e2e:
-    runs-on: ubuntu-latest
-
-    needs: [ build ]
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+          browser: chrome
+      - name: Generate report
+        run: cd cypress && npm run posttest
+      - name: Upload report
+        uses: actions/upload-artifact@v2
         with:
-          node-version: '18.x'    
-      - run: npm install
-      - run: npm test
+          name: cypress-cucumber-report
+          path: cypress/cucumber-report/
+    
